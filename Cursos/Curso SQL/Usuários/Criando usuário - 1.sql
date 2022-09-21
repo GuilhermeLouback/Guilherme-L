@@ -1,0 +1,3 @@
+--USE sakila;
+--USE mysql;
+--SELECT * FROM user

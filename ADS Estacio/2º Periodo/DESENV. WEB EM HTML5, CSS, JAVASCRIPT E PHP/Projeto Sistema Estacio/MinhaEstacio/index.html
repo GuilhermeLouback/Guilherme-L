@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src = "script.js"></script>
+
+<body>
+
+  <ul>
+    <li><a class="active" href="#home">Estacio JF</a></li>
+    <li><a id="discp">Disciplina</a></li>
+    <li><a id="time">Horário</a></li>
+    <li><a id="Professor">Professor</a></li>
+    <li><a id="conq">Classificação</a></li>
+    <li><a id="nota">Nota</a></li>
+    <li><a id="semestre">Semestre</a></li>
+    <li><a id="aluno">Aluno</a></li>
+    
+  </ul>
+  
+  <form action="/action_page.php">
+    
+    <fieldset id = "disciplinas" hidden >
+     <legend>Disciplinas:</legend>
+     <label  for="cname">Nome Completo:</label>
+     <input type="text" id="cname" name="cname"><br><br>
+     
+     <label for="cargah">Carga Horaria :</label>
+     <select name="cargah" id="cargah">
+       <option value="60">60</option>
+       <option value="70">70</option>
+       <option value="80">80</option>
+     </select><br><br>
+   
+     <label for="number">Avaliações:</label>
+     <input type="number" id="number" name="number"><br><br>
+     
+     <label for="descricao">Descrição: </label>
+     <textarea id="descricao" name="descricao" ></textarea>
+       <br><br>
+       <input type="hidden" id="id" name="id" value="001"><br><br>
+       <input type="submit" value="Submit">
+    </fieldset>
+
+    <fieldset id = "horario" hidden >
+      <legend>Horário</legend>
+      <p>Digite o dia da semana:</p>
+      <input type="date" name = "data" >
+      <p>Hora de inicio e hora de término:</p>
+      <input type = "time" id = "timei">
+      <input type = "time" id ="timet">
+      
+      <p>Disciplinas:</p>
+      <input type="radio" id="DESV" name="DESV" value="DESV">
+      <label for="html">DESENV. WEB EM HTML5, CSS, JAVASCRIPT E PHP</label><br>
+      <input type="radio" id="FUND" name="FUND" value="FUND">
+      <label for="html">FUNDAMENTOS DE REDES DE COMPUTADORES</label><br>
+      <input type="radio" id="INTRO" name="INTRO" value="INTRO">
+      <label for="html">INTRODUÇÃO À SEGURANÇA DA INFORMAÇÃO</label><br>
+      <input type="radio" id="PAR" name="PAR" value="PAR">
+      <label for="html">PAR. DE LING. DE PROGRAMAÇÃO EM PYTHON</label><br>
+
+      <P>Professor: </P>      
+      <label for="Professor"></label>
+      <select name="professor" id="Professor">
+        <option value="none"></option>
+        <option value="Bruno">BRUNO ZONOVELLI DA SILVA </option>
+        <option value="Luiz">LUIZ FERNANDO LAGUARDIA CAMPOS</option>
+      </select>
+
+      
+      
+      <p>Digite seu semestre atual: </p>
+      <input type="radio" id="periodo1" name="periodo1" value="periodo1">
+      <label for="html">1º Semestre</label><br>
+      <input type="radio" id="periodo2" name="periodo2" value="perido2"> 
+      <label for="periodo2">2º Semestre</label><br>
+      <input type="hidden" id="id" name="id" value="001"><br><br>
+      <input type="submit" value="Submit">
+    </fieldset>
+
+    <fieldset id = "professor" hidden>
+      <legend>Professor</legend>
+
+      <label for="descricao">Conhecimento: </label>
+      <textarea id="descricao" name="descricao" ></textarea>
+       <br><br>
+       <input type="hidden" id="id" name="id" value="001"><br><br>
+       
+       <label for="Professor">Nome: </label>
+       <select name="professor" id="Professor">
+        <option value="none"></option>
+        <option value="Bruno">BRUNO ZONOVELLI DA SILVA </option>
+        <option value="Luiz">LUIZ FERNANDO LAGUARDIA CAMPOS</option>
+      </select>
+      <br><br>
+      <input type="submit" value="Submit">
+    </fieldset>
+
+    <fieldset id = "classificacao" hidden>
+      <legend>Classificação</legend>
+      <label  for="time">Horario: </label>
+      <input type="time" id="time" name="time"><br><br>
+      <label for="nota">Nota :</label>
+      <select name="nota" id="nota">
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+       <option value="5">5</option>
+     </select><br><br>
+     <input type="submit" value="Submit">
+    </fieldset>
+
+    <fieldset id = "Nota" hidden>
+      <legend>Nota:</legend>
+      <label  for="time">Horario: </label>
+      <input type="time" id="time" name="time"><br><br>
+      <label for = "nota">Valor: </label>
+      <input type = "number" id="nota">
+
+      <p>Selecione o Semestre:</p>
+      <input type="radio" id="periodo1" name="periodo1" value="periodo1">
+      <label for="html">1º Semestre</label><br>
+      <input type="radio" id="periodo2" name="periodo2" value="perido2"> 
+      <label for="periodo2">2º Semestre</label><br>
+      <input type="hidden" id="id" name="id" value="001"><br><br>
+      <input type="submit" value="Submit">
+    </fieldset>
+
+
+   
+   <fieldset id = "Semestre" hidden>
+     <legend>Semestre:</legend>
+     <label  for="ano">Ano: </label>
+     <input type="number" id="ano" name="ano"><br><br>
+     <label for="mesi">Mes de Inicio:</label>
+     <input type="month" id="mesi" name="mesi"><br><br>
+     <label for="mesf">Mes Final:</label>
+     <input type="month" id="mesf" name="mesf"><br><br>
+
+     <p>Digite seu semestre atual :</p>
+     <input type="radio" id="periodo1" name="periodo1" value="periodo1">
+     <label for="html">1º Semestre</label><br>
+     <input type="radio" id="periodo2" name="periodo2" value="perido2"> 
+     <label for="periodo2">2º Semestre</label><br>
+     <input type="hidden" id="id" name="id" value="001"><br><br>
+     <input type="submit" value="Submit">
+   </fieldset>
+
+   <fieldset id = "Aluno" hidden >
+     <legend>Aluno: </legend>
+     <label  for="cname">Nome Completo:</label>
+     <input type="text" id="cname" name="cname"><br><br>
+     <label for = "matricula">Matricula: </label>
+     <input type = "number" id="matricula"><br></br>
+     <label for = "curso">Curso:</label>
+     <select name="nota" id="nota">
+      <option value="ADS">Analise e Desenvolvimento de Sistemas</option>
+    </select><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+
+  
+   
+   
+   
+   
+   
+   
+   
+   </form>
+
+
+
+
+</body>
+
+
+</html>
